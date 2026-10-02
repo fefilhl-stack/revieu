@@ -1,0 +1,42 @@
+{
+  "name": "revieu-presenter",
+  "version": "0.1.0",
+  "description": "Animated 2D presenter character (blond guy in sport sunglasses) for motion-graphics reels: SVG rig, gesture scenes, lip-sync, transparent video export.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./react": "./dist/adapters/react.js",
+    "./remotion": "./dist/adapters/remotion.js",
+    "./web": "./dist/adapters/web.js"
+  },
+  "bin": {
+    "presenter": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/bundle.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "gallery": "tsx scripts/gallery.ts",
+    "sheet": "tsx scripts/sheet.ts",
+    "export": "tsx src/cli.ts"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "esbuild": "^0.28.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.532",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
